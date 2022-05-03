@@ -1,4 +1,4 @@
-# Groupe de rocha_a 975772
+# RGP WELCOME TO THE POOL
 
 Création d'un RPG:
 
