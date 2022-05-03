@@ -1,0 +1,29 @@
+CC    =     gcc
+NAME  =     game
+SRC   = my_putchar.c \
+      my_putstr.c \
+      my_readline.c \
+      my_strlen.c \
+      my_strdup.c \
+      game.c \
+
+OBJ   =     $(SRC:%.c = %.o)
+
+CFLAGS      =     -W -Wall -ansi -pedantic -std=gnu99 -L. -I.
+
+LDFLAGS     =     -lmy
+
+RM    =     rm -f
+
+all:  $(NAME)
+
+$(NAME):	$(OBJ)
+		$(CC) $(OBJ) -o $(NAME) $(LDFLAGS) $(CFLAGS)
+
+clean:      
+	$(RM) $(OBJ)
+
+fclean:	clean
+	$(RM) $(NAME)
+
+re:	fclean all
